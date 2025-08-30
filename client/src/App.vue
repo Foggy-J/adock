@@ -14,7 +14,9 @@ const isMobileNavOpen = ref(false);
         <div>
           <img src="/user-icon.png" alt="User Icon" class="mx-auto hidden md:block w-1/2 h-1/2 bg-white rounded-full">
           <ul class="mt-4 text-white">
-            <li class="text-center text-xl font-bold">USERNAME</li>
+            <li class="text-center text-xl font-bold">
+              <RouterLink to="/profile" class="hover:underline">FULL NAME</RouterLink>
+            </li>
             <li class="text-center text-xs text-gray-400">EMAIL</li>
             <li class="mt-4">
               <RouterLink to="/dashboard" class="block text-center text-gray-300 hover:underline">Dashboard</RouterLink>
@@ -40,10 +42,10 @@ const isMobileNavOpen = ref(false);
           <li class="text-center text-xl font-bold">USERNAME</li>
           <li class="text-center text-xs text-gray-400">EMAIL</li>
           <li class="mt-2">
-            <RouterLink to="/dashboard" class="block text-center text-gray-300 hover:underline">Dashboard</RouterLink>
+            <RouterLink to="/dashboard" class="block text-center text-gray-300">Dashboard</RouterLink>
           </li>
           <li class="mt-2">
-            <RouterLink to="/settings" class="block text-center text-gray-300 hover:underline">Settings</RouterLink>
+            <RouterLink to="/profile" class="block text-center text-gray-300">Profile</RouterLink>
           </li>
           <li class="mt-2 border border-red-500 rounded px-2 py-1 text-center w-fit mx-auto bg-red-600 text-white hover:bg-red-500 transition">
             <RouterLink to="/logout">Logout</RouterLink>

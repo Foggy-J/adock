@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import('../views/Dashboard.vue')
     },
     {
+      path: '/profile',
+      name: 'Profile',
+      component: () => import('../views/Profile.vue')
+    },
+    {
       path: '/login',
       name: 'Login',
       component: () => import('../views/Login.vue')
@@ -28,7 +33,7 @@ router.beforeEach((to, from, next) => {
   }
   /** Set the document title based on the route name
   Fallback to 'aDock' if the name is not defined */
-  document.title = `${to.name} | aDock` || 'aDock';
+  document.title = `${to.name} | ADock` || 'ADock';
   next();
 })
 

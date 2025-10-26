@@ -5,23 +5,29 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Dashboard',
-      component: () => import('../views/Dashboard.vue')
-    },
-    {
-      path: '/profile',
-      name: 'Profile',
-      component: () => import('../views/Profile.vue')
+      component: () => import('../views/Dashboard.vue'),
+      children: [
+        {
+          path: '',
+          name: 'Apps',
+          component: () => import('../views/Apps.vue')
+        },
+        {
+          path: 'profile',
+          name: 'Profile',
+          component: () => import('../views/Profile.vue')
+        },
+        {
+          path: 'admin',
+          name: 'Admin',
+          component: () => import('../views/Admin.vue')
+        }
+      ],
     },
     {
       path: '/login',
       name: 'Login',
       component: () => import('../views/Login.vue')
-    },
-    {
-      path: '/admin',
-      name: 'Admin',
-      component: () => import('../views/Admin.vue')
     }
   ],
 })

@@ -1,16 +1,11 @@
 <script setup>
-import AppIcon from '@/components/AppIcon.vue';
+import TopNav from '@/components/TopNav.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-4 p-4">
-        <AppIcon icon="app1" title="Application 1" category="test" link="#" />
-        <AppIcon icon="app1" title="Application 1" link="#" />
-        <AppIcon icon="app1" title="Application 1" category="test" link="#" />
-        <AppIcon icon="app1" title="Application 1" link="#" />
-        <AppIcon icon="app1" title="Application 1" category="test" link="#" />
-        <AppIcon icon="app1" title="Application 1" category="test" link="#" />
-        <AppIcon icon="app1" title="Application 1" link="#" />
-        <AppIcon icon="app1" title="Application 1" category="test" link="#" />
-    </div>
+  <div>
+    <TopNav />
+    <RouterView />
+  </div>
 </template>

@@ -1,12 +1,24 @@
 <h1 align=center> ADock (ApplicationDock)</h1>
 
-### Application Dock for SSO Applications
+<h3 align=center>Application Dock for SSO Applications</h3>
 
-<h2 align=center>Features</h2>
+## Features
 
 - Easy-to-use Docker installation
+- App visibility handled via OIDC groups
 - 
 
-<h2 align=center>Documentation</h2>
+## Documentation
 
 [Installation](docs/installation.md)
+
+## Planned Features
+### Apps Page:
+- Filtering/Sorting
+- Widgets
+- Per-user configuration
+### Profile Page:
+- Profile customization (Change name, email etc.)
+- Permission overview
+### Site-wide:
+- Colour scheme customization

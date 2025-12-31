@@ -19,8 +19,23 @@ const router = createRouter({
         },
         {
           path: 'admin',
-          name: 'Admin',
-          component: () => import('../views/Admin.vue')
+          children: [
+            {
+              path: '',
+              name: 'Admin',
+              component: () => import('../views/Admin.vue')
+            },
+            {
+              path: 'create-category',
+              name: 'Create Category',
+              component: () => import('../views/Admin/createCategory.vue')
+            },
+            {
+              path: 'create-application',
+              name: 'Create Application',
+              component: () => import('../views/Admin/createApplication.vue')
+            }
+          ]
         }
       ],
     },

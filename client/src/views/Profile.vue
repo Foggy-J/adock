@@ -21,13 +21,13 @@ const groups = ref([
 </script>
 
 <template>
-  <div class="flex justify-end pt-4 px-4 md:hidden">
-    <button class="btn btn-error btn-outline btn-sm sm:hidden">
+  <div class="flex justify-end px-4 md:hidden">
+    <button class="bg-red-500 text-white font-semibold py-1 px-3 rounded text-center sm:hidden">
       <FontAwesomeIcon :icon="faRightFromBracket" class="-mr-0.5" />
       Logout
     </button>
   </div>
-  <div class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-white">
     <SettingsSection title="Profile" description="View your profile settings.">
       <div class="p-3">
         <ul>
@@ -38,19 +38,34 @@ const groups = ref([
     </SettingsSection>
 
     <SettingsSection title="Groups" description="View your group memberships.">
-      <ul class="flex flex-wrap gap-3 p-3">
+      <ul class="flex flex-wrap gap-1.5">
         <li
           v-for="group in groups"
           :key="group"
-          class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm w-fit"
+          class="badge font-bold"
         >
           {{ group }}
         </li>
       </ul>
     </SettingsSection>
   </div>
-  <p class="text-sm font-semibold p-4 text-red-700 md:text-center">
+  <p class="text-gray-400 text-sm font-semibold p-4 md:text-center">
     These settings are managed in your Identity Management platform, please contact your
     administrator for changes.
   </p>
 </template>
+
+<style scoped>
+.badge {
+  background-color: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: rgba(96, 165, 250, 0.4);
+}
+</style>
